@@ -24,7 +24,8 @@ I have integrated the ScottPlot library from Nuget into my project, see [Link Te
 
 The pace in `mm:ss.f` are converted to Power (in Watt) by the following method:
 
-```        internal double CalculatePower(TimeSpan time, double distance)
+```csharp        
+        internal double CalculatePower(TimeSpan time, double distance)
         {
             double timeInSeconds = time.TotalSeconds;
             // Pace per 500m in seconds
