@@ -8,7 +8,7 @@ Date: 	&emsp;		Dec 28, 2024
 
 Author:	&emsp;		Dirk Mueller
 **********************************************
-This is software for reading raw rowing history from my logbook of sessions on the Concept II rowing machine, spanning 1993 to 2024.  
+This is a console software for reading raw rowing history from my logbook of sessions on the Concept II rowing machine, spanning a time period from 1993 to 2024.  
 
 The entries were orginally in units of pace, meaning what pace - on average - did I need to cover the distance or duration, in the format
 
@@ -21,7 +21,6 @@ The entries were orginally in units of pace, meaning what pace - on average - di
     18.01.2015,2:18.9,2500 m
     12.07.2015,2:16.0,2500 m
 
-I have integrated the ScottPlot library from Nuget into my project, see [Link Text](https://scottplot.net/ "Scott plot utility").  
 
 The pace in `mm:ss.f` are converted to Power (in Watt) by the following method:
 
@@ -52,6 +51,7 @@ private List<PowerRowingData> distancePowerList = new List<PowerRowingData>()
 ```
 for simplified manipulation like adding or scaling the data for further processing.
 
+I have integrated the ScottPlot library from Nuget into my project, see [Home page of Scott Plot](https://scottplot.net/ "Scott plot utility").  
 The output is visualized by the following graph:  
 
 ![Alt text](/RowingHistory/Images/power.png) 
