@@ -1,4 +1,4 @@
-## Linked list with options to append, to push to head, or insert
+## Analysis of Rowing History with Concept II
 **********************************************
 Software:	&emsp;	C# 10
 
@@ -10,6 +10,6 @@ Author:	&emsp;		Dirk Mueller
 **********************************************
 Software for reading raw rowing history from the Concept II rowing machine.
 
-![Alt text](images/power.png)
+![Alt text](RowingHistory/RowingHistory/Images/power.png)
 
 *Fig 1: Raw data displayed as Power vs. Date*
