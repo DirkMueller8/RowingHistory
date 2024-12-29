@@ -203,18 +203,21 @@ namespace Rowing
         public void SaveAllListsToFile(string projectDirectory)
         {
             GeneratePowerLists();
+            Console.WriteLine($"Project folder in SaveAllLists:{projectDirectory}");
 
             string basePath = Path.Combine(projectDirectory, "Data");
-
             Console.WriteLine($"This was determined as the data folder of the project:{basePath}");
 
             var filePaths = new Dictionary<string, (List<object> list, string format)>
-            {
-                { basePath + "distanceList.txt", (new List<object>(distanceList), "regular") },
-                { basePath + "durationList.txt", (new List<object>(durationList), "regular") },
-                { basePath + "distancePowerList.txt", (new List<object>(distancePowerList), "power") },
-                { basePath + "durationPowerList.txt", (new List<object>(durationPowerList), "power") }
-            };
+    {
+        { Path.Combine(basePath, "distanceList.txt"), (new List<object>(distanceList), "regular") },
+        { Path.Combine(basePath, "durationList.txt"), (new List<object>(durationList), "regular") },
+        { Path.Combine(basePath, "distancePowerList.txt"), (new List<object>(distancePowerList), "power") },
+        { Path.Combine(basePath, "durationPowerList.txt"), (new List<object>(durationPowerList), "power") }
+    };
+
+            // Ensure directory exists before writing files
+            Directory.CreateDirectory(basePath);
 
             try
             {
@@ -261,6 +264,7 @@ namespace Rowing
         public void CreatePowerPlot(string whichtype, string projectDirectory)
         {
             string plotsFolder = Path.Combine(projectDirectory, "Data\\plots");
+            Console.WriteLine("Project directory path in SaveAllLists: " + projectDirectory);
 
             // Create the plot with default constructor
             var plt = new ScottPlot.Plot();
@@ -338,8 +342,10 @@ namespace Rowing
             string projectDirectory = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)
                 ?.Replace("bin\\Debug\\net8.0", "")
                 ?? Directory.GetCurrentDirectory();
+            Console.WriteLine("AppDomain: " + projectDirectory);
             // Define Data folder path
             string basePath = Path.Combine(projectDirectory, "Data");
+            Console.WriteLine("Base path in Main(): " + basePath);
 
             while (continueInput)
             {
@@ -362,11 +368,14 @@ namespace Rowing
                 switch (selectFileSource)
                 {
                     case "1":
-                        filePath = basePath + "\\input.txt";
+                        filePath = basePath + "\\input_test.txt";
+                        Console.WriteLine(filePath);
                         break;
 
                     case "2":
                         filePath = basePath + "\\input_no_less_than_2500m.txt";
+                        Console.WriteLine(filePath);
+
                         break;
 
                     case "3":
@@ -375,10 +384,14 @@ namespace Rowing
 
                     case "4":
                         filePath = basePath + "\\input_no_less_than_2500m_regression_early.txt";
+                        Console.WriteLine(filePath);
+
                         break;
 
                     case "5":
                         filePath = basePath + "\\input_no_less_than_2500m_regression_late.txt";
+                        Console.WriteLine(filePath);
+
                         break;
 
                     default:
