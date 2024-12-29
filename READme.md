@@ -63,20 +63,24 @@ the 2500 m sessions only, and ommiting the 1000 m rowing spells, see Fig. 2:
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m.png)
 
-*Fig 2: Raw data displayed as Power vs. Date for all log entries where distance records over or equal to 2500 m are concerned*
+*Fig 2: Raw data displayed as Power vs. Date for all log entries where distances were equal or greater than 2500 m*
 
 To look closer at the time period after I bought my own Concept II in 2015 I narrowed down the view accordingly, see Fig. 3:  
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m_no_1993.png)
 
-*Fig 3: Raw data displayed as Power vs. Date for all log entries where distance records over or equal to 2500 m are concerned*
+*Fig 3: Power vs. Date for all log entries for all log entries where distances were equal or greater than 2500 m, beginning in 2015*
 
 To get an idea on the age-related deterioration of power output I added a regression as dotted line for two different sub periods:
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m_regression_early.png)
 
-*Fig 4: Log entries where distance records over or equal to 2500 m are concerned in a sub category*
+*Fig 4: Power vs. Date for all log entries between 2015 and 2020, where distances were equal or greater than 2500*
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m_regression_late.png)
 
-*Fig 5: Log entries where distance records over or equal to 2500 m are concerned in a sub category*
+*Fig 5: Power vs. Date for all log entries between 2020 and end of 2024, where distances were equal or greater than 2500 m*
+
+If I take an average of the slope a = -0.017 x which means per year I lose 0.017 W/day, in a year amounting to 6.2 W of power loss per year. This translates to 31 W in a period of 5 years.
+
+It is nice to see that during the Corona pandemic I was able to substantially improve my phyical condition by rowing excessively!
