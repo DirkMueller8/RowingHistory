@@ -10,6 +10,6 @@ Author:	&emsp;		Dirk Mueller
 **********************************************
 Software for reading raw rowing history from the Concept II rowing machine.
 
-![Alt text](RowingHistory/RowingHistory/Images/power.png)
+![Alt text](/RowingHistory/Images/power.png)
 
 *Fig 1: Raw data displayed as Power vs. Date*
