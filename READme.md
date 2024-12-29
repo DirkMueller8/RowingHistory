@@ -81,6 +81,6 @@ To get an idea on the age-related deterioration of power output I added a regres
 
 *Fig 5: Power vs. Date for all log entries between 2020 and end of 2024, where distances were equal or greater than 2500 m*
 
-If I take an average of the slope a = -0.017 x which means per year I lose 0.017 W/day, in a year amounting to 6.2 W of power loss per year. This translates to 31 W in a period of 5 years.
+I take an average of the slope a = -0.017 x, which means per year I lose 0.017 W/day, in a year amounting to 6.2 W loss of power. This translates to 31 W in a period of 5 years.
 
-It is nice to see that during the Corona pandemic I was able to substantially improve my phyical condition by rowing excessively!
+It is nice to see from Fig 3. that during the Corona pandemic I was able to substantially improve my phyical condition by rowing excessively!
