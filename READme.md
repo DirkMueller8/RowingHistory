@@ -8,7 +8,7 @@ Date: 	&emsp;		Dec 28, 2024
 
 Author:	&emsp;		Dirk Mueller
 **********************************************
-This is a console software for reading raw rowing history from my logbook of sessions on the Concept II rowing machine, spanning a time period from 1993 to 2024.  
+This is a console C# application for reading raw rowing history from my logbook of sessions on the Concept II rowing machine, spanning a time period from 1993 to 2024.  
 
 The entries were orginally in units of pace, meaning what pace - on average - did I need to cover the distance or duration, in the format
 
@@ -22,7 +22,7 @@ The entries were orginally in units of pace, meaning what pace - on average - di
     12.07.2015,2:16.0,2500 m
 
 
-The pace in `mm:ss.f` are converted to Power (in Watt) by the following method:
+The pace in `mm:ss.f` is converted to Power (in Watt) by the following method:
 
 ```csharp        
         internal double CalculatePower(TimeSpan time, double distance)
@@ -36,7 +36,7 @@ The pace in `mm:ss.f` are converted to Power (in Watt) by the following method:
         }
 ```
 
-The data is held in a `List<T>` generic collection where T is a type parameter, in this case, the custom class RowingData
+The data is held in a `List<T>` generic collection where T is a type parameter, in this case, the custom class `PowerRowingData`has the fields
 
 ```csharp  
         public DateTime Date { get; set; }
@@ -67,7 +67,7 @@ the 2500 m sessions only, and ommiting the 1000 m rowing spells, see Fig. 2:
 
 To look closer at the time period after I bought my own Concept II in 2015 I narrowed down the view accordingly, see Fig. 3:  
 
-![Alt text](/RowingHistory/Images/power_no_less_than_2500m_wo_1993.png)
+![Alt text](/RowingHistory/Images/power_no_less_than_2500m_no_1993.png)
 
 *Fig 3: Raw data displayed as Power vs. Date for all log entries where distance records over or equal to 2500 m are concerned*
 
