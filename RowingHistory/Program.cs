@@ -203,10 +203,10 @@ namespace Rowing
         public void SaveAllListsToFile(string projectDirectory)
         {
             GeneratePowerLists();
-            Console.WriteLine($"Project folder in SaveAllLists:{projectDirectory}");
+            Console.WriteLine($"Project folder in SaveAllLists: {projectDirectory}");
 
             string basePath = Path.Combine(projectDirectory, "Data");
-            Console.WriteLine($"This was determined as the data folder of the project:{basePath}");
+            Console.WriteLine($"This was determined as the data folder of the project: {basePath}");
 
             var filePaths = new Dictionary<string, (List<object> list, string format)>
     {
@@ -218,11 +218,13 @@ namespace Rowing
 
             // Ensure directory exists before writing files
             Directory.CreateDirectory(basePath);
+            Console.WriteLine($"Created directory: {basePath}");
 
             try
             {
                 foreach (var file in filePaths)
                 {
+                    Console.WriteLine($"Writing to file: {file.Key}");
                     using (StreamWriter writer = new StreamWriter(file.Key))
                     {
                         foreach (var data in file.Value.list)
