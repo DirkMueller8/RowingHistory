@@ -352,11 +352,18 @@ namespace Rowing
             while (continueInput)
             {
                 Console.WriteLine("There are various input files, from which you select one: ");
-                Console.WriteLine("1: original complete input");
-                Console.WriteLine("2: input but omit all lines with less than 2500 m");
-                Console.WriteLine("3: input but omit all lines with less than 2500 m, and omit data from 1993");
-                Console.WriteLine("4: input but omit all lines with less than 2500 m, and omit data from 1993, regression early");
-                Console.WriteLine("5: input but omit all lines with less than 2500 m, and omit data from 1993, regression late");
+                Console.WriteLine("Short distance (2500 m) processing");
+                Console.WriteLine("  1: original complete input");
+                Console.WriteLine("  2: omit all lines with less than 2500 m");
+                Console.WriteLine("  3: omit all lines with less than 2500 m, and omit data from 1993");
+                Console.WriteLine("  4: omit all lines with less than 2500 m, and omit data from 1993, regression early");
+                Console.WriteLine("  5: omit all lines with less than 2500 m, and omit data from 1993, regression late");
+                Console.WriteLine("Longer duration (30 min) processing:");
+                Console.WriteLine("  6: original complete input");
+                Console.WriteLine("  7: omit all lines with less than 30 min");
+                Console.WriteLine("  8: omit all lines with less than 30 min, and omit data from 1993");
+                Console.WriteLine("  9: omit all lines with less than 30 min, and omit data from 1993, regression early");
+                Console.WriteLine("  10: omit all lines with less than 30 min, and omit data from 1993, regression late");
                 Console.WriteLine("x: exit");
                 string? selectFileSource = Console.ReadLine();
 
