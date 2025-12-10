@@ -10,7 +10,7 @@ Author:	&emsp;		Dirk Mueller
 **********************************************
 This is a console C# application for reading raw rowing history from my logbook of sessions on the Concept II rowing machine, spanning a time period from 1993 to 2024.  
 
-The entries were orginally in units of pace, meaning what pace - on average - did I need to cover the distance or duration, in the format
+The entries were originally in units of pace, meaning what pace - on average - did I need to cover the distance or duration, in the format
 
     01.03.1993,2:03.0,30 min
     17.06.2013,2:18.0,10 min
@@ -36,7 +36,7 @@ The pace in `mm:ss.f` is converted to Power (in Watt) by the following method:
         }
 ```
 
-The data is held in a `List<T>` generic collection where T is a type parameter, in this case, the custom class `PowerRowingData`has the fields
+The data is held in a `List<T>` generic collection where T is a type parameter, in this case, the custom class `PowerRowingData` has the fields
 
 ```csharp  
         public DateTime Date { get; set; }
@@ -58,8 +58,8 @@ The output is visualized by the following graph:
 
 *Fig 1: Raw data displayed as Power vs. Date for all log entries*
 
-For the purpose of having better comparability the software is designed to group the sessions, in this case 
-the 2500 m sessions only, and ommiting the 1000 m rowing spells, see Fig. 2: 
+For the purpose of having better comparebility the software is designed to group the sessions, in this case 
+the 2500 m sessions only, and omitting the 1000 m rowing spells, see Fig. 2: 
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m.png)
 
@@ -71,7 +71,7 @@ To look closer at the time period after I bought my own Concept II in 2015 I nar
 
 *Fig 3: Power vs. Date for all log entries for all log entries where distances were equal or greater than 2500 m, beginning in 2015*
 
-To get an idea on the age-related deterioration of power output I added a regression as dotted line for two different sub periods:
+To get an idea on the age-related deterioration of power output, I added a regression line as dotted line for two different subperiods:
 
 ![Alt text](/RowingHistory/Images/power_no_less_than_2500m_regression_early.png)
 
@@ -83,4 +83,4 @@ To get an idea on the age-related deterioration of power output I added a regres
 
 I take an average of the slope a = -0.017 x, which means per year I lose 0.017 W/day, in a year amounting to 6.2 W loss of power. This translates to 31 W in a period of 5 years.
 
-It is nice to see from Fig 3. that during the Corona pandemic I was able to substantially improve my phyical condition by rowing excessively!
+It is nice to see from Fig 3. that during the Corona pandemic I was able to substantially improve my physical condition by rowing excessively!
